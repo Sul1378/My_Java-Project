@@ -93,6 +93,50 @@ public class HomeWorksNajibullah_ID1060 {
         } else System.out.println("Your number isn't even and false.");
     }
 
+    //16
+    public static int mol(int moltiple) {
+        if (moltiple % 10 == 0) {
+            System.out.println("Your number is multiple of 10.");
+            return moltiple;
+        } else {
+            System.out.println("Your number isn't multiple of 10.");
+            return moltiple;
+        }
+    }
+
+    //13
+    public static int mark(int m) {
+        if (m >= 90) {
+            System.out.println("You get A");
+            return m;
+        } else if (m >= 80) {
+            System.out.println("You get B");
+            return m;
+        } else if (m >= 70) {
+            System.out.println("You get C");
+            return m;
+        } else if (m >= 60) {
+            System.out.println("You get D");
+            return m;
+        } else {
+            System.out.println("You get F");
+            return m;
+        }
+    }
+
+    //18
+    public static void leapyear(int year) {
+        boolean leap = false;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0)
+                    leap = true;
+                else leap = false;
+            } else leap = true;
+        } else leap = false;
+        System.out.println(year + " is a leap year? - " + leap);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("||   Method Home Works   ||\n--> Najibullah 'Faizi' ID- 1060 <--");
@@ -255,7 +299,30 @@ public class HomeWorksNajibullah_ID1060 {
                         even(even);
                         System.out.println("------------------------------");
 
-                    }
+                    } else if (choice3 == 6) {
+                        System.out.println(" ---> multiple of 10 <--- ");
+                        System.out.print("Enter your number: ");
+                        int multiple = sc.nextInt();
+                        mol(multiple);
+                        System.out.println("----------------------");
+
+                    } else if (choice3 == 7) {
+                        System.out.println(" ---> Get Grad <--- ");
+                        System.out.print("Enter your subject mark: ");
+                        int mark = sc.nextInt();
+                        mark(mark);
+                        System.out.println("----------------------------");
+
+                    } else if (choice3 == 8) {
+                        System.out.println(" ---> Leap Year <---");
+                        System.out.print("Enter the year to check: ");
+                        int year = sc.nextInt();
+                        leapyear(year);
+                        System.out.println("---------------------------------");
+
+                    } else if (choice3 == 0) {
+                        break;
+                    } else System.out.println("You choose wrong number!!!\n ----------------------------");
 
                 }
             }
