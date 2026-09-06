@@ -137,10 +137,35 @@ public class HomeWorksNajibullah_ID1060 {
         System.out.println(year + " is a leap year? - " + leap);
     }
 
+    //6
+    public static int absol(int absolute) {
+        if (absolute < 0) {
+            return -absolute;
+        } else return absolute;
+    }
+
+    //15
+    public static void small(int a, int b) {
+        if (a < b) System.out.println("The smallest number is:" + a);
+        else System.out.println("The smallest number is:" + b);
+    }
+
+    //10
+    public static int cel(int cel) {
+        return (cel * 9 / 5) + 32;
+    }
+
+    //19
+    public static int price(int p, int d) {
+        return p * d / 100;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("||   Method Home Works   ||\n--> Najibullah 'Faizi' ID- 1060 <--");
+        System.out.println("   --> Najibullah 'Faizi' ID- 1060 <--");
+
         while (true) {
+            System.out.println("      ***   Method Home Works   ***      ");
             System.out.println("1: Basic Math");
             System.out.println("2: Geometry");
             System.out.println("3: Condition & Logic");
@@ -150,7 +175,7 @@ public class HomeWorksNajibullah_ID1060 {
             System.out.println("0: Exit");
             System.out.print("Choice: ");
             int choice = sc.nextInt();
-            System.out.println("--------------------------------------");
+            System.out.println("--------------------------------");
 
             if (choice == 1) {
                 while (true) {
@@ -325,7 +350,77 @@ public class HomeWorksNajibullah_ID1060 {
                     } else System.out.println("You choose wrong number!!!\n ----------------------------");
 
                 }
-            }
+            } else if (choice == 4) {
+                while (true) {
+                    System.out.println("     ---> number Operation <---     ");
+                    System.out.println("1: Absolute value.");
+                    System.out.println("2: Find smallest");
+                    System.out.println("0: back ...");
+                    System.out.print("Choose: ");
+                    int choice4 = sc.nextInt();
+                    System.out.println("-------------------------");
+                    if (choice4 == 1) {
+                        System.out.println(" ---> Absolute <---");
+                        System.out.print("Enter your absolute number: ");
+                        int abso = sc.nextInt();
+                        System.out.println("Your absolute number is: " + absol(abso));
+                        System.out.println("-----------------------------------");
+                    } else if (choice4 == 2) {
+                        System.out.println(" ---> Smallest <---");
+                        System.out.print("Enter your first number: ");
+                        int first = sc.nextInt();
+                        System.out.print("Enter your second number: ");
+                        int second = sc.nextInt();
+                        small(first, second);
+                        System.out.println("----------------------------------");
+                    } else if (choice4 == 0) {
+                        break;
+                    } else System.out.println("You choose wrong number!!!\n ----------------------------");
+                }
+            } else if (choice == 5) {
+                while (true) {
+                    System.out.println(" ---> Unit Conversion <");
+                    System.out.println("1: Celsius to Fahrenheit");
+                    System.out.println("0: Back ---> ");
+                    System.out.print("Choose: ");
+                    int choice5 = sc.nextInt();
+                    System.out.println("----------------------------");
+                    if (choice5 == 1) {
+                        System.out.println(" ---> Celsius to Fahrenheit <--- ");
+                        System.out.print("Enter the Celsius:  ");
+                        int Celsius = sc.nextInt();
+                        System.out.println("The Fahrenheit is: " + cel(choice));
+                    } else if (choice5 == 0) {
+                        break;
+                    } else System.out.println("You choose wrong number!!!\n ----------------------------");
+
+                }
+
+            } else if (choice == 6) {
+                while (true) {
+                    System.out.println("     ---> Business & Finance <---     ");
+                    System.out.println("1: Calculate final price.");
+                    System.out.println("0: Back ---> ");
+                    System.out.print("Choose: ");
+                    int choice6 = sc.nextInt();
+                    System.out.println("----------------------------");
+                    if (choice6 == 1) {
+                        System.out.println(" ---> Business & Finance <--- ");
+                        System.out.print("Enter the price:  ");
+                        int price = sc.nextInt();
+                        System.out.print("Enter the Discount :  ");
+                        int discount = sc.nextInt();
+                        System.out.println("Final price is: " + price(price, discount));
+                        System.out.println("------------------------------");
+                    } else if (choice6 == 0) {
+                        break;
+                    } else System.out.println("You choose wrong number!!!\n ----------------------------");
+
+                }
+            } else if (choice == 0) {
+                System.out.println("You exited of Method Home Works \n      ----- Good bay ----- ");
+                break;
+            } else System.out.println("You choose wrong number!!!\n ----------------------------");
         }
     }
 
